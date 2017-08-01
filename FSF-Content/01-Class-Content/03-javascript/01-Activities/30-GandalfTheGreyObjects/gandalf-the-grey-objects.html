@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gandalf The Grey Objects</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var gandalf = {
+      "real name": "Gandalf",
+      "age (est)": 11000,
+      "race": "Maia",
+      "haveRetirementPlan": true,
+      "aliases": [
+        "Greyhame",
+        "Stormcrow",
+        "Mithrandir",
+        "Gandalf the Grey",
+        "Gandalf the White"
+      ]
+    }
+
+    /*
+    --NOTE--
+    // TWO notations for getting fields from the object: gandalf.race or gandalf["race"]
+    // Why is there the gandalf[] syntax and not just the dot syntax? With the [] syntax, the field name can technically have a space (would need quotes to call). Also, the [] syntax for getting a field value of an object allows you to dynamically call a field of an object.
+    To dynamically determine what property of the object you want returned.
+    */
+
+    // Object properties can be accessed with "bracket notation"
+    alert("My name is " + gandalf["real name"]);
+
+    // Or with "dot notation" if the property has no spaces
+    if (gandalf.haveRetirementPlan) {
+
+      // Or with a variable that matches the name of the property
+      var ageProperty = "age (est)";
+      // Getting fields of galdalf object DYNAMICALLY. (only possible with [] brackets)
+      var years = gandalf[ageProperty];
+      alert("My 401k has been gathering interest for " + years + " years!");
+
+
+    }
+
+    // You can access arrays and their properties from an object
+    alert("I have more than " + gandalf.aliases.length + " aliases");
+
+    // Non-existent properties return undefined
+    alert("My designation is " + gandalf["designation"]);
+  </script>
+</body>
+
+</html>

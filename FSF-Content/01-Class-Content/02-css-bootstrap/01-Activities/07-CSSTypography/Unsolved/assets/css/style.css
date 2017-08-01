@@ -1,0 +1,14 @@
+p {
+	font-family: 'Spectral', serif;
+	font-size: 20px;
+	font-weight: 8;
+	line-height: 1.5;
+	letter-spacing: 1.5px;
+}
+h1 {
+	font-family: 'Bubbler One', sans-serif;
+	letter-spacing: 1px;
+}
+h3 {
+	font-family: 'Inconsolata', monospace;
+}

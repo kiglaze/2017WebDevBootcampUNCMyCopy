@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var likesSteak = confirm("Do you like steak?");
+		if(likesSteak) {
+			document.write("Here's a steak sandwich!");
+		} else {
+			document.write("Here's a stir fry!");
+		}
+		var birthYear = prompt("What is your birth year?");
+		var date = new Date();
+		var yearsAgo21 = date;
+		yearsAgo21.setFullYear(yearsAgo21.getFullYear() - 21);
+		alert(yearsAgo21);
+		var is21 = Date.parse(birthYear) < Date.parse(yearsAgo21);
+		if(Date.parse(birthYear) > Date.parse(yearsAgo21)) {
+			alert("No Sake for you!");
+		} else if(Date.parse(birthYear) < Date.parse(yearsAgo21)) {
+			alert("Here is Sake!");
+		}
+	</script>
+</body>
+</html>
